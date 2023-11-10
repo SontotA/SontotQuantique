@@ -26,12 +26,6 @@ print(c.draw())
 c2 = QuantumCircuit(3)
 c2.measure_all()
 
-# be = Aer.get_backend('statevector_simulator')
-# job = be.run(c)
-# result = job.result()
-# outputState = result.get_statevector(c,decimals = 3)
-# print(outputState)
-# plot_state_city(outputState, filename="state_city_plot.png")
 
 be = BasicAer.get_backend('qasm_simulator') # the device to run on
 c = c.compose(c2)
